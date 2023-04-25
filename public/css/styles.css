@@ -3300,8 +3300,8 @@ textarea.form-control-lg {
   --bs-dropdown-link-color: #212529;
   --bs-dropdown-link-hover-color: #1e2125;
   --bs-dropdown-link-hover-bg: #e9ecef;
-  --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: #d94948;
+  --bs-dropdown-link-active-color: #1e2125;
+  --bs-dropdown-link-active-bg: #dadde0;
   --bs-dropdown-link-disabled-color: #adb5bd;
   --bs-dropdown-item-padding-x: 1rem;
   --bs-dropdown-item-padding-y: 0.25rem;
@@ -11030,7 +11030,7 @@ header.masthead2 {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: url("../images/cover.png");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

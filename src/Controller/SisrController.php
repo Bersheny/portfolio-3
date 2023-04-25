@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 #[Route('/competences-sisr')]
 class SisrController extends AbstractController
 {
-    #[Route('/', name: 'app_sisr_index')]
+    #[Route('/', name: 'app_competences-sisr_index')]
     public function index(TranslatorInterface $translator): Response
     {
         return $this->render('default/competences-sisr.html.twig', [
