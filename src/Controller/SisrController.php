@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-#[Route('/competences-sisrs')]
+#[Route('/competences-sisr')]
 class SisrController extends AbstractController
 {
     #[Route('/', name: 'app_sisr_index')]
