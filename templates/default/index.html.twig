@@ -1,38 +1,41 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DefaultController!{% endblock %}
+{% block title %}Hello DefaultController!
+{% endblock %}
 
 {% block body %}
 
-<div class="container" style="max-width: 1000px">
-    <div class="container pt-5 pb-5 px">
-        <center>
-            <h1>À PROPOS</h1>
-            <hr class="new1" style="max-width: 150px">
-            <br>
-        </center>
-    </div>
+	<div class="container" style="max-width: 1000px">
+		<div class="container pt-5 pb-5 px">
+			<center>
+				<h1>À PROPOS</h1>
+				<hr class="new1" style="max-width: 150px">
+				<br>
+			</center>
+		</div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col" style="text-align: center">
-                <img src="images/vincent.jpg" class="img-fluid rounded" style="max-width: 350px">
-            </div>
-            <div class="col">
-                <span style="font-size: 40px; font-family: Inter-Bold">Je m'appelle</span><br>
-                <span style="font-size: 40px; font-family: Inter-Bold; color: #d94948">Vincent Mazurais</span>
-                <br>
-                <div class="pt-3">
-                    <span class="text-muted"><i>Étudiant en première année de BTS SIO (Services Informatiques aux
-                            Organisations) Option SLAM (Solutions Logicielles et Applications Métiers) au Lycée Notre
-                            Dame de la Providence, 50300, Avranches.</i></span>
-                </div>
-                <div class="pt-5 pb-5">
-                    <a href="files/cv.pdf" download="cv.pdf" class="btn btn-primary btn-lg">&nbsp;&nbsp;&nbsp;CV&nbsp;&nbsp;&nbsp;</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+		<div class="container">
+			<div class="row">
+				<div class="col" style="text-align: center">
+					<img src="images/vincent.jpg" class="img-fluid rounded" style="max-width: 350px">
+				</div>
+				<div class="col">
+					<span style="font-size: 40px; font-family: Inter-Bold">Je m'appelle</span><br>
+					<span style="font-size: 40px; font-family: Inter-Bold; color: #d94948">Vincent Mazurais</span>
+					<br>
+					<div class="pt-3">
+						<span class="text-muted">
+							<i>Étudiant en première année de BTS SIO (Services Informatiques aux
+								                            Organisations) Option SLAM (Solutions Logicielles et Applications Métiers) au Lycée Notre
+								                            Dame de la Providence, 50300, Avranches.</i>
+						</span>
+					</div>
+					<div class="pt-5 pb-5">
+						<a href="files/cv.pdf" download="cv.pdf" class="btn btn-primary btn-lg">&nbsp;&nbsp;&nbsp;CV&nbsp;&nbsp;&nbsp;</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 {% endblock %}
