@@ -16,12 +16,4 @@ class DefaultController extends AbstractController
             'controller_name' => $translator->trans('Hello!'),
         ]);
     }
-
-    #[Route('/cvd', name: 'app_cvd_index')]
-    public function cvd(TranslatorInterface $translator): Response
-    {
-        return $this->render('default/cv.html.twig', [
-            'controller_name' => $translator->trans('Hello!'),
-        ]);
-    }
 }
