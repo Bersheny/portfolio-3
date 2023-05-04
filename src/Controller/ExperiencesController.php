@@ -7,10 +7,9 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-#[Route('/experiences-professionnelles')]
 class ExperiencesController extends AbstractController
 {
-    #[Route('/', name: 'app_experiences_index')]
+    #[Route('/experiences-professionnelles', name: 'app_experiences_index')]
     public function index(TranslatorInterface $translator): Response
     {
         return $this->render('default/experiences-professionnelles.html.twig', [
