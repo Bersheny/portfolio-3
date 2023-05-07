@@ -16,4 +16,12 @@ class DefaultController extends AbstractController
             'controller_name' => $translator->trans('Hello!'),
         ]);
     }
+
+    #[Route('/cv')]
+    public function cv(TranslatorInterface $translator): Response
+    {
+        return $this->render('default/cv.html.twig', [
+            'controller_name' => $translator->trans('Hello!'),
+        ]);
+    }
 }
