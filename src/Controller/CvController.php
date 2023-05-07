@@ -7,12 +7,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class DefaultController extends AbstractController
+class CvController extends AbstractController
 {
-    #[Route('/', name: 'app_default_index')]
+    #[Route('/cv', name: 'app_cv_index')]
     public function index(TranslatorInterface $translator): Response
     {
-        return $this->render('default/index.html.twig', [
+        return $this->render('default/cv.html.twig', [
             'controller_name' => $translator->trans('Hello!'),
         ]);
     }
