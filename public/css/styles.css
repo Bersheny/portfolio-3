@@ -11168,7 +11168,7 @@ ul.timeline-list li {
   display: table;
 }
 .timeline_content {
-  border: 1px solid #d94948;
+  border: 0px solid #d94948;
   background-color: #fff
 }
 ul.timeline-list li .timeline_content {
