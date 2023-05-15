@@ -48,8 +48,8 @@ jobs:
       - name: Archive build
         uses: actions/upload-artifact@v3
         with:
-          name: ./
-          path: dist
+          name: dist
+          path: ./
   cd:
     needs: ci
     name: Continuous Deployment
