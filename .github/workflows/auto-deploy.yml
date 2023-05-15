@@ -45,6 +45,8 @@ jobs:
           envkey_APP_DEBUG: false
           envkey_APP_SECRET: ${{ secrets.APP_SECRET }}
           file_name: .env
+      - name: Locate
+        run: ls -la
       - name: Archive build
         uses: actions/upload-artifact@v3
         with:
