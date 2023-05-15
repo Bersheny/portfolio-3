@@ -75,6 +75,6 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           rm: true
-          source: dist/
+          source: dist/*
           target: ${{ secrets.PATH }}
      
