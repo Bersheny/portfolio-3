@@ -17,7 +17,8 @@ class VeilleController extends AbstractController
         //dump(print_r($simpleXmlElement->channel->item, true));
         dump($simpleXmlElement->channel->item);
 
-        //$datePublication = date('d/m/Y', $simpleXmlElement->channel->item->pubDate);
+        $datePublication = date('d/m/Y', strtotime((string) $simpleXmlElement->channel->item->pubDate));
+
 
         return $this->render('default/veille-technologique.html.twig', array(
             'items' => $simpleXmlElement->channel->item,
