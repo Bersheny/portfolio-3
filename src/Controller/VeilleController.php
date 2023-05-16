@@ -12,10 +12,15 @@ class VeilleController extends AbstractController
     #[Route('/veille-technologique', name: 'app_veille_index')]
     public function index(TranslatorInterface $translator): Response
     {
-        $rss = simplexml_load_file('https://openai.com/blog/rss.xml');
+        $simpleXmlElement = simplexml_load_file('https://openai.com/blog/rss.xml');
+
+        //dump(print_r($simpleXmlElement->channel->item, true));
+        dump($simpleXmlElement->channel->item);
+
+        //$datePublication = date('d/m/Y', $simpleXmlElement->channel->item->pubDate);
 
         return $this->render('default/veille-technologique.html.twig', array(
-            'rss' => $rss,
+            'items' => $simpleXmlElement->channel->item,
         ));
     }
 }
