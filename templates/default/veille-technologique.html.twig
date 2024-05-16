@@ -69,7 +69,7 @@
 							<a target='_blank' href="{{ item.link }}">
 								<h4>{{ item.title }}</h4>
 							</a>
-							<i>{{ item.pubDate }}</i>
+							<i>{{ item.pubDate|date("j F Y", "Europe/Paris") }}</i>
 							<p>{{ item.description }}</p>
 						</div><br><br>
 						{% set count = count + 1 %}

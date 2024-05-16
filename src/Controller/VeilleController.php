@@ -12,7 +12,9 @@ class VeilleController extends AbstractController
     #[Route('/veille-technologique', name: 'app_veille_index')]
     public function index(TranslatorInterface $translator): Response
     {
-        $simpleXmlElement = simplexml_load_file('https://openai.com/blog/rss.xml');
+        // $simpleXmlElement = simplexml_load_file('https://openai.com/blog/rss.xml');
+        $simpleXmlElement = simplexml_load_file('https://blogs.nvidia.com/feed/');
+        // $simpleXmlElement = simplexml_load_file('https://blog.google/technology/ai/rss/');
 
         //dump(print_r($simpleXmlElement->channel->item, true));
         dump($simpleXmlElement->channel->item);
