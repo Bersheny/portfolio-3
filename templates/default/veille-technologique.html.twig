@@ -1,82 +1,107 @@
 {% extends 'navbar.html.twig' %}
 
-{% block title %}Hello DefaultController!
-{% endblock %}
+{% block title %}Hello DefaultController!{% endblock %}
 
 {% block body %}
-	<style>
-		a {
-			text-decoration: none;
-			color: #333;
-			display: block;
-			margin-bottom: 10px;
-		}
+    <style>
+        a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
 
-		a:hover {
-			color: #666;
-		}
-	</style>
+        a:hover {
+            color: #666;
+        }
+    </style>
 
-	<!--Masthead-->
-	<header class="masthead2">
-		<div class="container px-4 px-lg-5 h-100">
-			<div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-				<div class="col-lg-8 align-self-end">
-					<h1 class="text-white font-weight-bold" style="letter-spacing: 10px; font-family:Louis-Bold">
-						VEILLE TECHNOLOGIQUE</h1>
-				</div>
-				<div class="col-lg-8 align-self-baseline">
-					<h4 class="text-white-75" style="letter-spacing: 2px; font-family:Kiona">VINCENT MAZURAIS</h3>
-				</div>
-			</div>
-		</div>
-	</header>
+    <!-- Masthead -->
+    <header class="masthead2">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-white font-weight-bold" style="letter-spacing: 10px; font-family:Louis-Bold">
+                        VEILLE TECHNOLOGIQUE</h1>
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <h4 class="text-white-75" style="letter-spacing: 2px; font-family:Kiona">VINCENT MAZURAIS</h4>
+                </div>
+            </div>
+        </div>
+    </header>
 
-	<div class="container" style="max-width: 1000px">
-		<div class="container pt-5 pb-5 px">
-			<center>
-				<h1>VEILLE TECHNOLOGIQUE</h1>
-				<hr class="new1" style="max-width: 150px">
-				<br>
-			</center>
-		</div>
+    <div class="container" style="max-width: 1000px">
+        <div class="container pt-5 pb-5 px">
+            <center>
+                <h1>VEILLE TECHNOLOGIQUE</h1>
+                <hr class="new1" style="max-width: 150px">
+                <br>
+            </center>
+        </div>
 
-		<div class="container text-center pb-5">
-			<h5 class="text-muted" style="font-family:Inter-Bold; text-justify: auto;">
-				<i>L'intelligence artificielle est un domaine en pleine expansion qui offre de nombreuses opportunités passionnantes et stimulantes. En tant que développeur d'IA, vous seriez en mesure de travailler sur des technologies innovantes qui ont un impact significatif sur différents secteurs, tels que la santé, les transports, l'énergie, les finances et bien d'autres.</i>
-			</h5>
-			<br><br><br>
-			<h5 style="font-family:Inter-Bold">NVIDIA</h5>
-			<div class="row pb-2">
-				<div class="col text-end" style="color: #d94948">
-					----------
-				</div>
+        <div class="container text-center pb-5">
+            <h5 class="text-muted pb-5" style="font-family:Inter-Bold; text-justify: auto;">
+                <i>L'intelligence artificielle est un domaine en pleine expansion qui offre de nombreuses opportunités passionnantes et stimulantes. En tant que développeur d'IA, vous seriez en mesure de travailler sur des technologies innovantes qui ont un impact significatif sur différents secteurs, tels que la santé, les transports, l'énergie, les finances et bien d'autres.</i>
+            </h5>
 
-				<div class="col-md-auto text-center" style="color: #d94948">
-					<i class="fa-solid fa-rss"></i>
-				</div>
+            <h5 style="font-family:Inter-Bold" class="pt-5">AWS Machine Learning</h5>
+            <div class="row pb-2">
+                <div class="col text-end" style="color: #d94948">
+                    ----------
+                </div>
+                <div class="col-md-auto text-center" style="color: #d94948">
+                    <i class="fa-solid fa-rss"></i>
+                </div>
+                <div class="col text-start" style="color: #d94948">
+                    ----------
+                </div>
+            </div>
 
-				<div class="col text-start" style="color: #d94948">
-					----------
-				</div>
-			</div>
+            <div class="container text-start pt-5">
+                {% set count = 0 %}
+                {% for item in items1 %}
+                    {% if count < 5 %}
+                        <div class="container">
+                            <a target='_blank' href="{{ item.link }}">
+                                <h4>{{ item.title }}</h4>
+                            </a>
+                            <i>Publié le {{ item.pubDate|date("j/m/Y", "Europe/Paris") }} par {{ item.author }}</i>
+                            <p>{{ item.description }}</p>
+                        </div><br><br>
+                        {% set count = count + 1 %}
+                    {% endif %}
+                {% endfor %}
+            </div>
 
-			<div class="container text-start pt-5">
-				{% set count = 0 %}
-				{% for item in items %}
-					{% if count < 5 %}
-						<div class="container">
-							<a target='_blank' href="{{ item.link }}">
-								<h4>{{ item.title }}</h4>
-							</a>
-							<i>{{ item.pubDate|date("j F Y", "Europe/Paris") }}</i>
-							<p>{{ item.description }}</p>
-						</div><br><br>
-						{% set count = count + 1 %}
-					{% endif %}
-				{% endfor %}
-			</div>
-		</div>
-	</div>
+            <h5 style="font-family:Inter-Bold" class="pt-5">NVIDIA</h5>
+            <div class="row pb-2">
+                <div class="col text-end" style="color: #d94948">
+                    ----------
+                </div>
+                <div class="col-md-auto text-center" style="color: #d94948">
+                    <i class="fa-solid fa-rss"></i>
+                </div>
+                <div class="col text-start" style="color: #d94948">
+                    ----------
+                </div>
+            </div>
+
+            <div class="container text-start pt-5">
+                {% set count = 0 %}
+                {% for item in items2 %}
+                    {% if count < 5 %}
+                        <div class="container">
+                            <a target='_blank' href="{{ item.link }}">
+                                <h4>{{ item.title }}</h4>
+                            </a>
+                            <i>Publié le {{ item.pubDate|date("j/m/Y", "Europe/Paris") }} par {{ item.author }}</i>
+                            <p>{{ item.description }}</p>
+                        </div><br><br>
+                        {% set count = count + 1 %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
-
